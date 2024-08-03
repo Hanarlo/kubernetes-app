@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vrpoapp-service
+spec:
+  ports:
+    - port: 80
+      targetPort: vproapp-port
+      porotocol: TCP
+  selector:
+    app: vproapp
+  type: LoadBalancer
