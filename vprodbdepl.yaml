@@ -6,7 +6,7 @@ metadata:
     app: vprodb
 spec:
   selector:
-    mathcLabels:
+    matchLabels:
       app: vprodb
   replicas: 1
   template:
@@ -36,6 +36,7 @@ spec:
           awsElasticBlockStore:
             volumeID: vol-09d98497377e28c3b
             fsType: ext4
+
       initContainers:
         - name: busybox
           image: busybox:latest
